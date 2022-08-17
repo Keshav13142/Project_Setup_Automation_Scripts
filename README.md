@@ -3,6 +3,7 @@
 #### _I'm sure there must be better ways to do this, but I did tried to do this on my own. :)_
 
 <br/>
+
 Create an alias named `init` (or something else) that runs the `script.sh` command in the terminal.
 
 <br/>
