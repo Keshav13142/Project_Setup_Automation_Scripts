@@ -5,7 +5,6 @@
 <br/>
 
 Create an alias named `init` (or something else) that runs the `script.sh` command in the terminal.
-
 <br/>
 
 # Basic command
