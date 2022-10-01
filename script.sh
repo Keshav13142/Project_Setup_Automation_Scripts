@@ -32,14 +32,14 @@ case $TYPE in
             mkdir backend;
             cd backend;
             cp -r $scriptDir/node/* .;
-            npm i express dotenv;
+            npm i express dotenv express-async-handler;
             cd ..;
             cp $scriptDir/.gitignore .;
             ;;
         "node")
             cp -r $scriptDir/node/* .;
             cp $scriptDir/.gitignore  .;
-            npm i express dotenv;
+            npm i express dotenv express-async-handler;
             ;;
         "vanilla")
             cp -r $scriptDir/vanilla/* . && cp $scriptDir/.gitignore .;            
