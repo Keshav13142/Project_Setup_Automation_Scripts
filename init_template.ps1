@@ -2,6 +2,11 @@ $type=$args[0]
 $app_name=$args[1]
 $open=$args[2]
 
+if($type -eq '' -and $app_name -eq ''){
+    Write-Host "Invalid options"
+    exit;
+}
+
 if($app_name -ne '.' -And $app_name -ne '' ){
     mkdir $app_name;
     Set-Location $app_name;

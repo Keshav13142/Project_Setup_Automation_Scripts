@@ -5,6 +5,12 @@ APP_NAME=$2
 OPEN=$3
 scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 
+if [ "$APP_NAME" == "" ] & [ "$TYPE" == "" ]; then    
+    mkdir $APP_NAME;
+    cd $APP_NAME;
+    exit;
+fi
+
 if [ "$APP_NAME" != "." ] & [ "$APP_NAME" != "" ]; then    
     mkdir $APP_NAME;
     cd $APP_NAME;
