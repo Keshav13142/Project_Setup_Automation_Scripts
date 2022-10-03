@@ -20,14 +20,14 @@ git init;
 
 if($type -ne 'node' -And $type -ne 'new' -And $type -ne ''){
     if($type.split('-').length -ne 2){
-        npm create vite@latest -- --template $type.split('-')[0] .;
+        npm create vite@latest -- --template $type .;
         npm i;
         Copy-Item $PSScriptRoot\.gitignore  .
     }
     else{
         mkdir frontend;
         Set-Location frontend;
-        npm create vite@latest -- --template $type .;
+        npm create vite@latest -- --template $type.split('-')[0] .;
         npm i;
         Remove-Item .gitignore;
         Set-Location ..;
