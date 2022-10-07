@@ -47,7 +47,7 @@ else{
             npm i express dotenv express-async-handler;
         }
         'new'{
-            Copy-Item $PSScriptRoot\vanilla\* .;
+            Copy-Item $PSScriptRoot\vanilla\* . -Recurse;
          }
         Default: { Write-Output "Invalid-Option" }
     }
