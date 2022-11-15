@@ -22,6 +22,7 @@ const errorHandler = (error, req, res, next) => {
     error: error.message,
     stack: process.env.NODE_ENV === "development" ? error.stack : null,
   });
+  next();
 };
 
 module.exports = { errorHandler, notFound };

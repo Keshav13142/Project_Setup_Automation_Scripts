@@ -13,7 +13,7 @@ if($app_name -ne '.' -And $app_name -ne '' ){
 }
 
 if($open -eq 'open'){
-    code .;
+    code .;             
 }
 
 git init;
@@ -34,7 +34,7 @@ if($type -ne 'node' -And $type -ne 'new' -And $type -ne ''){
         mkdir backend;
         Set-Location backend;
         Copy-Item $PSScriptRoot\node\* -Destination . -Recurse;
-        npm i express dotenv express-async-handler;
+        npm i express dotenv express-async-handler cors;
         Set-Location ..;
         Copy-Item $PSScriptRoot\.gitignore .;
     }
